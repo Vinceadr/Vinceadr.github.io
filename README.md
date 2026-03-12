@@ -7,7 +7,7 @@ Bienvenue sur le dépôt de mon portfolio personnel ! Ce projet regroupe mes ré
 ---
 
 ## 🚀 À propos de moi
-Passionné par le développement web et les nouvelles technologies, j'aime concevoir des interfaces fluides et des solutions robustes. Ce portfolio est une vitrine de mon apprentissage constant et de ma curiosité technique.
+Passionné par le Systéme et Réseau, la CyberSécurité et les nouvelles technologies. Ce portfolio est une vitrine de mon apprentissage constant et de ma curiosité technique.
 
 - 🛠️ Actuellement en train de perfectionner mes compétences en **JavaScript / TypeScript**.
 - 🔭 Je travaille sur des projets personnels axés sur le design et l'expérience utilisateur.
