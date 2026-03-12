@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veille Technologique — ANDREO Vincent | BTS SIO SISR</title>
+  <meta name="description" content="Veille technologique de Vincent Andreo sur Kali Linux et les outils de pentest." />
+
+  <script src="js/tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased">
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <img src="assets/logo-iris.png" alt="Logo IRIS" class="h-8 object-contain" loading="lazy" />
+        </div>
+        <span class="font-mono text-sm text-slate-300 group-hover:text-white transition-colors hidden sm:block">ANDREO Vincent</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="index.html"      class="nav-link">Accueil</a></li>
+        <li><a href="profil.html"     class="nav-link">Profil</a></li>
+        <li><a href="projets.html"    class="nav-link">Projets</a></li>
+        <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+        <li><a href="veille.html"     class="nav-link">Veille</a></li>
+        <li><a href="contact.html"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="https://vandreoportfolio.wordpress.com/wp-content/uploads/2025/07/cv_2025-07-09_vincent_andreo.pdf" target="_blank" rel="noopener"
+           class="hidden md:inline-flex items-center gap-2 text-xs font-mono px-4 py-2 rounded-lg border border-accent-lime/40 text-accent-lime hover:bg-accent-lime/10 transition-all hover:border-accent-lime hover:text-accent-lime">
+          <i class="fas fa-download"></i> CV
+        </a>
+        <button id="burger-btn" class="md:hidden text-slate-300 hover:text-white" aria-label="Menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col gap-0 mt-4 pb-4 border-t border-slate-700/50">
+      <a href="index.html"      class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Accueil</a>
+      <a href="profil.html"     class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Profil</a>
+      <a href="projets.html"    class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Projets</a>
+      <a href="entreprise.html" class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Entreprise</a>
+      <a href="veille.html"     class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Veille</a>
+      <a href="contact.html"    class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      <a href="https://vandreoportfolio.wordpress.com/wp-content/uploads/2025/07/cv_2025-07-09_vincent_andreo.pdf" target="_blank"
+         class="block px-4 py-3 text-sm text-accent-lime hover:text-accent-lime transition-all"><i class="fas fa-download mr-2"></i>CV</a>
+    </div>
+  </nav>
+
+  <!-- ── VEILLE ── -->
+  <section id="veille" class="relative pt-32 pb-24 overflow-hidden">
+    <div class="glow-orb w-96 h-96 bg-accent-lime" style="top:50%;left:-80px;opacity:0.08;"></div>
+    <div class="glow-orb w-64 h-64 bg-accent-lime" style="bottom:20%;right:-40px;opacity:0.07;"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- En-tête -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="text-accent-lime font-mono text-sm tracking-widest uppercase mb-3 block">// 05. veille</span>
+        <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Veille <span class="gradient-text">Technologique</span></h1>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- QU'EST-CE QUE LA VEILLE — affiché EN PREMIER -->
+      <div class="mb-16" data-aos="fade-up">
+        <div class="glass rounded-3xl p-8 mb-8">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-accent-lime/20 flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-eye text-accent-lime text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">QU'EST-CE QUE LA VEILLE ?</h3>
+          </div>
+          <p class="text-slate-300 leading-relaxed mb-8">
+            La veille technologique consiste à <strong class="text-accent-lime">surveiller en continu</strong> les nouvelles tendances, innovations et évolutions du secteur informatique, afin de rester à jour et compétitif. C'est un atout essentiel pour s'adapter à un environnement numérique en constante évolution.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div class="rounded-2xl p-4" style="background:rgba(220,255,80,0.06); border:1px solid rgba(220,255,80,0.18);">
+              <i class="fas fa-binoculars text-accent-lime text-2xl mb-3 block"></i>
+              <h4 class="text-white font-semibold mb-1">Observer</h4>
+              <p class="text-slate-400 text-sm">Suivre les évolutions technologiques, outils et menaces du secteur IT.</p>
+            </div>
+            <div class="rounded-2xl p-4" style="background:rgba(220,255,80,0.06); border:1px solid rgba(220,255,80,0.18);">
+              <i class="fas fa-lightbulb text-accent-lime text-2xl mb-3 block"></i>
+              <h4 class="text-white font-semibold mb-1">Analyser</h4>
+              <p class="text-slate-400 text-sm">Identifier les opportunités, les risques et les tendances clés.</p>
+            </div>
+            <div class="rounded-2xl p-4" style="background:rgba(220,255,80,0.06); border:1px solid rgba(220,255,80,0.18);">
+              <i class="fas fa-rocket text-accent-lime text-2xl mb-3 block"></i>
+              <h4 class="text-white font-semibold mb-1">Innover</h4>
+              <p class="text-slate-400 text-sm">Anticiper les changements et favoriser l'innovation dans les projets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bannière Kali Linux -->
+      <div class="relative rounded-3xl overflow-hidden mb-10" data-aos="zoom-in">
+        <div class="w-full h-48 md:h-64 bg-gradient-to-r from-accent-lime/20 to-blue-500/20 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(220,255,80,0.1) 0%, rgba(59,130,246,0.1) 100%);">
+          <div class="text-center">
+            <img src="assets/logo-kali.png" alt="Logo Kali" class="h-20 object-contain mb-2 inline-block opacity-80" />
+            <h2 class="text-2xl md:text-3xl font-black text-white leading-tight mt-2">Kali <span class="gradient-text">Linux</span></h2>
+            <p class="text-slate-300 text-sm mt-1"><i class="fas fa-terminal text-accent-lime mr-1"></i> Distribution spécialisée en pentest & cybersécurité</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mb-8">
+        <div class="mt-4 inline-block px-6 py-3 glass rounded-2xl">
+          <p class="text-slate-300 text-sm font-mono italic">"Kali Linux &amp; Pentest"</p>
+        </div>
+      </div>
+
+      <!-- Contenu Kali complet -->
+      <div class="space-y-12">
+
+        <!-- Mon sujet de veille -->
+        <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-accent-lime/20 flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-crosshairs text-accent-lime text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">MON SUJET DE VEILLE</h3>
+          </div>
+          <!-- Question mise en avant -->
+          <div class="rounded-2xl p-5 mb-6" style="background:rgba(220,255,80,0.08); border-left:4px solid #DCFF50;">
+            <p class="text-white font-semibold italic text-base leading-relaxed">
+              "Quels sont les outils de pentest sous <span class="text-accent-lime">Kali Linux</span> qui permettent de détecter ou de se défendre contre les <span class="text-accent-lime">malwares</span> ?"
+            </p>
+          </div>
+          <!-- Contexte en 2 colonnes -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-accent-lime font-semibold mb-3 flex items-center gap-2">
+                <i class="fas fa-info-circle"></i> Contexte Kali Linux
+              </h4>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                <strong class="text-slate-200">Kali Linux</strong> est une distribution open source spécialisée dans le test d'intrusion, l'audit et la cybersécurité. Elle regroupe une grande variété d'outils open source préinstallés (scanners, analyseurs réseau, forensic), référence incontournable pour les professionnels de la sécurité.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-accent-lime font-semibold mb-3 flex items-center gap-2">
+                <i class="fas fa-shield-virus"></i> Rôle des outils pentest
+              </h4>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Les outils de pentest permettent de <strong class="text-slate-200">détecter, analyser et comprendre</strong> les malwares en simulant des attaques, en inspectant le réseau, la mémoire ou les fichiers système. Ils jouent un rôle clé dans la lutte contre les menaces.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Les évolutions -->
+        <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <i class="fas fa-chart-line text-accent-lime"></i> LES ÉVOLUTIONS
+          </h3>
+          <div class="space-y-4 text-slate-400 leading-relaxed text-sm">
+            <p>Les outils de pentest ont fortement évolué entre 2015 et 2025, passant de simples scanners de vulnérabilités à des plateformes intégrant l'automatisation, l'analyse comportementale et l'intelligence artificielle.</p>
+            <p>Cette évolution a permis une détection plus rapide et plus précise des malwares, notamment grâce à l'analyse réseau, mémoire et système.</p>
+            <p class="font-semibold text-white">Exemples:</p>
+            <ul class="list-none space-y-2 pl-4 border-l-2 border-accent-lime/40">
+              <li><span class="text-accent-lime">•</span> Automatisation accrue (outils comme Metasploit avec des script automatisés)</li>
+              <li><span class="text-accent-lime">•</span> Intégration de l'intelligence artificielle (outils comme Snort avec des modules IA)</li>
+              <li><span class="text-accent-lime">•</span> Détection proactive (outils comme OSINT Framework ou Shodan)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Les impacts -->
+        <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <i class="fas fa-bolt text-accent-lime"></i> LES IMPACTS
+          </h3>
+          <div class="space-y-4 text-slate-400 leading-relaxed text-sm">
+            <p>Leur impact est significatif : ils renforcent la sécurité des infrastructures, réduisent les temps de réponse aux attaques et permettent une meilleure compréhension des techniques utilisées par les cybercriminels.</p>
+            <p class="font-semibold text-white">Exemples :</p>
+            <ul class="list-none space-y-2 pl-4 border-l-2 border-accent-lime/40">
+              <li><span class="text-accent-lime">•</span> Réduction du temps de détection (grâce à l'analyse en temps réel de Wireshark)</li>
+              <li><span class="text-accent-lime">•</span> Renforcement de la sécurité des application web (Burp Suite ou OWASP ZAP permettent de corriger des failles XSS ou SQLi)</li>
+              <li><span class="text-accent-lime">•</span> Formation et sensibilisation (les outils de pentest sont utilisés dans des environnements de test comme CTF « Capture The Flag », labos « TryHackMe »)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tableau des outils -->
+        <div class="glass rounded-3xl p-8 overflow-x-auto" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <i class="fas fa-table text-accent-lime"></i> TABLEAU DES OUTILS
+          </h3>
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-slate-700">
+                <th class="text-left py-3 px-4 text-accent-lime font-semibold">Outil</th>
+                <th class="text-left py-3 px-4 text-accent-lime font-semibold">Utilisation principale</th>
+                <th class="text-left py-3 px-4 text-accent-lime font-semibold">Mise en œuvre contre les malwares</th>
+              </tr>
+            </thead>
+            <tbody class="text-slate-400">
+              <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                <td class="py-3 px-4 font-medium text-white">Wireshark</td>
+                <td class="py-3 px-4">Analyse de paquets réseau</td>
+                <td class="py-3 px-4">Détecte les communications suspectes</td>
+              </tr>
+              <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                <td class="py-3 px-4 font-medium text-white">Nmap</td>
+                <td class="py-3 px-4">Scan de ports et services</td>
+                <td class="py-3 px-4">Identifie des services ouverts utilisés par des malwares</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30 transition-colors">
+                <td class="py-3 px-4 font-medium text-white">Metasploit</td>
+                <td class="py-3 px-4">Exploitation de vulnérabilités</td>
+                <td class="py-3 px-4">Simule des attaques pour tester si un malware pourrait s'introduire</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IoT SECURITY SECTION -->
+  <section id="veille-iot" class="relative pt-20 pb-0 bg-alt overflow-hidden">
+    <div class="glow-orb w-80 h-80 bg-accent-lime" style="top:20%;right:-60px;opacity:0.08;"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- En-tête IoT -->
+      <div class="text-center mb-8" data-aos="fade-up">
+        <span class="text-accent-lime font-mono text-sm tracking-widest uppercase mb-3 block">// 05b. Veille - IoT</span>
+        <h1 class="text-3xl md:text-4xl font-black text-white mb-4">Sécurité des <span class="gradient-text">Objets Connectés (IoT)</span></h1>
+        <div class="section-divider"></div>
+        <div class="mt-6 inline-block px-6 py-3 glass rounded-2xl">
+          <p class="text-slate-300 text-sm font-mono italic">"IoT Security & Connected Devices"</p>
+        </div>
+      </div>
+
+      <!-- Bannière IoT -->
+      <div class="relative rounded-3xl overflow-hidden mb-10" data-aos="zoom-in">
+        <div class="w-full h-48 md:h-64 bg-gradient-to-r from-accent-lime/20 to-blue-500/20 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(220,255,80,0.1) 0%, rgba(59,130,246,0.1) 100%);">
+          <div class="text-center">
+            <i class="fas fa-microchip text-4xl text-accent-lime mb-4 block opacity-70"></i>
+            <p class="text-slate-400 font-mono">Internet of Things & Cybersecurity</p>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-dark/60 via-transparent to-transparent"></div>
+      </div>
+
+      <!-- Intro IoT modernisée -->
+      <div class="space-y-4 mb-2">
+
+        <!-- C'est quoi l'IoT ? -->
+        <div class="glass rounded-3xl p-8" data-aos="fade-up">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-accent-lime/20 flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-microchip text-accent-lime text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">C'est quoi l'IoT ?</h3>
+          </div>
+          <p class="text-slate-300 leading-relaxed mb-6">
+            L'IoT, ou <strong class="text-accent-lime">Internet of Things</strong>, désigne tous les objets du quotidien connectés à Internet : montres connectées, caméras de surveillance, frigos, voitures, ampoules intelligentes... Le nombre d'objets connectés devrait atteindre <strong class="text-white">75 milliards d'ici 2025</strong>. Chaque objet connecté représente une porte d'entrée potentielle pour les hackers.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div class="rounded-2xl p-4 text-center" style="background:rgba(220,255,80,0.06); border:1px solid rgba(220,255,80,0.18);">
+              <p class="text-3xl font-black text-accent-lime mb-1">75Md</p>
+              <p class="text-slate-400 text-sm">appareils connectés d'ici 2025</p>
+            </div>
+            <div class="rounded-2xl p-4 text-center" style="background:rgba(220,255,80,0.06); border:1px solid rgba(220,255,80,0.18);">
+              <p class="text-3xl font-black text-accent-lime mb-1">820K</p>
+              <p class="text-slate-400 text-sm">attaques IoT par jour dans le monde</p>
+            </div>
+            <div class="rounded-2xl p-4 text-center" style="background:rgba(220,255,80,0.06); border:1px solid rgba(220,255,80,0.18);">
+              <p class="text-3xl font-black text-accent-lime mb-1">5 min</p>
+              <p class="text-slate-400 text-sm">avant la 1ère attaque après connexion</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pourquoi c'est dangereux ? -->
+        <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-skull-crossbones text-red-400 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Pourquoi c'est dangereux ?</h3>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Un appareil IoT est attaqué en moyenne dans les <strong class="text-accent-lime">5 premières minutes</strong> après sa connexion à Internet. Dans le monde, les appareils IoT subissent environ <strong class="text-accent-lime">820 000 attaques par jour</strong>. Le problème principal est simple : ces objets sont conçus pour être <strong class="text-white">pratiques, pas pour être sécurisés</strong>. Les mots de passe sont souvent identiques pour tous les appareils du même modèle, et les mises à jour sont rares.
+          </p>
+        </div>
+
+        <!-- Exemple concret : Mirai -->
+        <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="150">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-bug text-orange-400 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Un exemple concret : le botnet Mirai</h3>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <p class="text-slate-300 leading-relaxed text-sm">
+                En <strong class="text-accent-lime">2016</strong>, des hackers ont infecté des centaines de milliers de caméras et routeurs mal sécurisés. Ces appareils ont servi à lancer une attaque massive contre <strong class="text-white">Dyn</strong>, un fournisseur DNS américain, rendant inaccessibles <strong class="text-white">Netflix, Twitter, Amazon et PayPal</strong> pendant plusieurs heures.
+              </p>
+            </div>
+            <div class="rounded-2xl p-4" style="background:rgba(251,146,60,0.08); border-left:4px solid #fb923c;">
+              <p class="text-orange-300 text-sm font-semibold mb-2">Mise à jour 2025</p>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Le botnet <strong class="text-white">BadBox 2.0</strong> a infecté plus de <strong class="text-accent-lime">10 millions de téléviseurs intelligents</strong> avant même leur sortie d'usine.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment se protéger -->
+        <div class="glass rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-shield-alt text-green-400 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Comment se protéger ?</h3>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div class="flex items-start gap-3 rounded-xl p-4" style="background:rgba(220,255,80,0.05); border:1px solid rgba(220,255,80,0.15);">
+              <i class="fas fa-key text-accent-lime mt-1 flex-shrink-0"></i>
+              <p class="text-slate-300 text-sm">Changer les mots de passe par défaut dès la première connexion</p>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl p-4" style="background:rgba(220,255,80,0.05); border:1px solid rgba(220,255,80,0.15);">
+              <i class="fas fa-sync text-accent-lime mt-1 flex-shrink-0"></i>
+              <p class="text-slate-300 text-sm">Mettre à jour régulièrement le firmware des appareils</p>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl p-4" style="background:rgba(220,255,80,0.05); border:1px solid rgba(220,255,80,0.15);">
+              <i class="fas fa-network-wired text-accent-lime mt-1 flex-shrink-0"></i>
+              <p class="text-slate-300 text-sm">Isoler les objets connectés sur un réseau Wi-Fi séparé</p>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl p-4" style="background:rgba(220,255,80,0.05); border:1px solid rgba(220,255,80,0.15);">
+              <i class="fas fa-power-off text-accent-lime mt-1 flex-shrink-0"></i>
+              <p class="text-slate-300 text-sm">Désactiver les fonctions inutilisées comme l'accès à distance</p>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl p-4" style="background:rgba(220,255,80,0.05); border:1px solid rgba(220,255,80,0.15);">
+              <i class="fas fa-certificate text-accent-lime mt-1 flex-shrink-0"></i>
+              <p class="text-slate-300 text-sm">Privilégier des marques avec des certifications de sécurité reconnues</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="rounded-3xl p-8" style="background:rgba(220,255,80,0.07); border:1px solid rgba(220,255,80,0.25);" data-aos="fade-up" data-aos-delay="250">
+          <div class="flex items-center gap-4 mb-4">
+            <i class="fas fa-flag-checkered text-accent-lime text-2xl"></i>
+            <h3 class="text-xl font-bold text-white">Conclusion</h3>
+          </div>
+          <p class="text-slate-300 leading-relaxed mb-4">
+            L'IoT est désormais partout, et les attaques ne cessent d'augmenter. Environ <strong class="text-accent-lime">80% des appareils IoT en entreprise</strong> sont jugés insuffisamment sécurisés. La sécurité doit être pensée dès la conception des objets, et non ajoutée après coup.
+          </p>
+          <blockquote class="border-l-4 border-accent-lime pl-4 text-slate-400 italic text-sm">
+            "L'objet connecté le plus dangereux est celui qu'on a oublié sur son réseau."
+          </blockquote>
+        </div>
+      </div>
+
+    <div class="pb-20"></div>
+    </div>
+  </section>
+
+  <!-- SITOGRAPHIE CYBERSÉCURITÉ -->
+  <section class="relative pt-0 pb-20 bg-alt overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-2">
+        <span class="text-accent-lime font-mono text-sm tracking-widest uppercase mb-2 block">// Ressources professionnelles</span>
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-0">Sitographie Cybersécurité</h2>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 32px 24px; padding: 0 0 36px 0; max-width: 1350px; margin: 0 auto">
+        
+        <!-- Card 1: Kali Linux Tools -->
+        <div style="display:flex; width:calc(33.33% - 16px); min-width:320px; min-height:120px; background:#1e293b; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.3); overflow:hidden; margin-bottom:8px">
+          <div style="background:#334155; display:flex; align-items:center; justify-content:center; width:120px; min-height:120px">
+            <img src="assets/logo-kali.png" alt="Kali Linux Tools" style="width:68px; max-height:68px; object-fit:contain">
+          </div>
+          <div style="flex:1; padding:20px 20px 20px 24px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-weight:700; font-size:1.13em; color:#DCFF50; margin-bottom:7px">Kali Linux Tools</div>
+            <div style="font-size:1em; color:#cbd5e1; margin-bottom:16px">Liste officielle des outils de pentest, malware, forensic et analyse réseau.</div>
+            <a href="https://www.kali.org/tools/" target="_blank" style="align-self:flex-start; padding:8px 22px; background:#DCFF50; border-radius:22px; color:#fff; font-weight:600; text-decoration:none; font-size:.97em; display:inline-block; transition:all 0.3s">Voir le site</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Offensive Security Blog -->
+        <div style="display:flex; width:calc(33.33% - 16px); min-width:320px; min-height:120px; background:#1e293b; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.3); overflow:hidden; margin-bottom:8px">
+          <div style="background:#334155; display:flex; align-items:center; justify-content:center; width:120px; min-height:120px">
+            <div style="background:#000000; color:#ffffff; font-weight:bold; font-size:16px; padding:10px; border-radius:4px">Offensive Security</div>
+          </div>
+          <div style="flex:1; padding:20px 20px 20px 24px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-weight:700; font-size:1.13em; color:#DCFF50; margin-bottom:7px">Offensive Security Blog</div>
+            <div style="font-size:1em; color:#cbd5e1; margin-bottom:16px">Blog d'actualité sur Kali Linux, automatisation et outils avancés de pentest.</div>
+            <a href="https://www.offensive-security.com/blog/" target="_blank" style="align-self:flex-start; padding:8px 22px; background:#DCFF50; border-radius:22px; color:#000; font-weight:600; text-decoration:none; font-size:.97em; display:inline-block; transition:all 0.3s">Voir le site</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Metasploit Docs -->
+        <div style="display:flex; width:calc(33.33% - 16px); min-width:320px; min-height:120px; background:#1e293b; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.3); overflow:hidden; margin-bottom:8px">
+          <div style="background:#334155; display:flex; align-items:center; justify-content:center; width:120px; min-height:120px; color:#CC0000; font-weight:bold; font-size:16px; text-align:center">Metasploit</div>
+          <div style="flex:1; padding:20px 20px 20px 24px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-weight:700; font-size:1.13em; color:#27b04a; margin-bottom:7px">Metasploit Docs</div>
+            <div style="font-size:1em; color:#cbd5e1; margin-bottom:16px">Documentation pour automatisation, scripts et détection de vulnérabilités.</div>
+            <a href="https://docs.metasploit.com/" target="_blank" style="align-self:flex-start; padding:8px 22px; background:#27b04a; border-radius:22px; color:#fff; font-weight:600; text-decoration:none; font-size:.97em; display:inline-block">Voir le site</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Wireshark Docs -->
+        <div style="display:flex; width:calc(33.33% - 16px); min-width:320px; min-height:120px; background:#1e293b; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.3); overflow:hidden; margin-bottom:8px">
+          <div style="background:#334155; display:flex; align-items:center; justify-content:center; width:120px; min-height:120px">
+            <div style="background:#1679A7; color:#ffffff; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-weight:bold; border-radius:50%">WS</div>
+          </div>
+          <div style="flex:1; padding:20px 20px 20px 24px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-weight:700; font-size:1.13em; color:#1679A7; margin-bottom:7px">Wireshark Docs</div>
+            <div style="font-size:1em; color:#cbd5e1; margin-bottom:16px">Analyse réseau et détection proactive de malware par inspection de paquets.</div>
+            <a href="https://www.wireshark.org/docs/" target="_blank" style="align-self:flex-start; padding:8px 22px; background:#1679A7; border-radius:22px; color:#fff; font-weight:600; text-decoration:none; font-size:.97em; display:inline-block">Voir le site</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Snort -->
+        <div style="display:flex; width:calc(33.33% - 16px); min-width:320px; min-height:120px; background:#1e293b; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.3); overflow:hidden; margin-bottom:8px">
+          <div style="background:#334155; display:flex; align-items:center; justify-content:center; width:120px; min-height:120px">
+            <div style="background:#ED2224; color:#ffffff; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-weight:bold; border-radius:8px">Snort</div>
+          </div>
+          <div style="flex:1; padding:20px 20px 20px 24px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-weight:700; font-size:1.13em; color:#ED2224; margin-bottom:7px">Snort</div>
+            <div style="font-size:1em; color:#cbd5e1; margin-bottom:16px">IDS/IPS open source, détection de malware avec signatures et modules IA.</div>
+            <a href="https://snort.org/" target="_blank" style="align-self:flex-start; padding:8px 22px; background:#ED2224; border-radius:22px; color:#fff; font-weight:600; text-decoration:none; font-size:.97em; display:inline-block">Voir le site</a>
+          </div>
+        </div>
+
+        <!-- Card 6: OWASP ZAP -->
+        <div style="display:flex; width:calc(33.33% - 16px); min-width:320px; min-height:120px; background:#1e293b; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.3); overflow:hidden; margin-bottom:8px">
+          <div style="background:#334155; display:flex; align-items:center; justify-content:center; width:120px; min-height:120px; color:#3DB3C1; font-weight:bold; font-size:16px; text-align:center">OWASP ZAP</div>
+          <div style="flex:1; padding:20px 20px 20px 24px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-weight:700; font-size:1.13em; color:#3DB3C1; margin-bottom:7px">OWASP ZAP</div>
+            <div style="font-size:1em; color:#cbd5e1; margin-bottom:16px">Pentest web, détection de failles exploitables (XSS, SQLi…)</div>
+            <a href="https://www.zaproxy.org/" target="_blank" style="align-self:flex-start; padding:8px 22px; background:#3DB3C1; border-radius:22px; color:#000; font-weight:600; text-decoration:none; font-size:.97em; display:inline-block">Voir le site</a>
+          </div>
+        </div>
+
+        <!-- Card 7: Malware Traffic Analysis -->
+        <div style="display:flex; width:calc(33.33% - 16px); min-width:320px; min-height:120px; background:#1e293b; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.3); overflow:hidden; margin-bottom:8px">
+          <div style="background:#334155; display:flex; align-items:center; justify-content:center; width:120px; min-height:120px; color:#B0B04A; font-weight:bold; font-size:14px; text-align:center">Malware Traffic Analysis</div>
+          <div style="flex:1; padding:20px 20px 20px 24px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-weight:700; font-size:1.13em; color:#B0B04A; margin-bottom:7px">Malware Traffic Analysis</div>
+            <div style="font-size:1em; color:#cbd5e1; margin-bottom:16px">Blog d'analyse de trafic infecté et exercices de détection de malware.</div>
+            <a href="https://www.malware-traffic-analysis.net/" target="_blank" style="align-self:flex-start; padding:8px 22px; background:#B0B04A; border-radius:22px; color:#000; font-weight:600; text-decoration:none; font-size:.97em; display:inline-block">Voir le site</a>
+          </div>
+        </div>
+
+        <!-- Card 8: Shodan -->
+        <div style="display:flex; width:calc(33.33% - 16px); min-width:320px; min-height:120px; background:#1e293b; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.3); overflow:hidden; margin-bottom:8px">
+          <div style="background:#334155; display:flex; align-items:center; justify-content:center; width:120px; min-height:120px">
+            <div style="background:#3DB3B0; color:#ffffff; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-weight:bold; border-radius:8px">Shodan</div>
+          </div>
+          <div style="flex:1; padding:20px 20px 20px 24px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-weight:700; font-size:1.13em; color:#3db3b0; margin-bottom:7px">Shodan</div>
+            <div style="font-size:1em; color:#cbd5e1; margin-bottom:16px">Moteur de recherche pour détection proactive de failles sur Internet.</div>
+            <a href="https://www.shodan.io/" target="_blank" style="align-self:flex-start; padding:8px 22px; background:#3DB3B0; border-radius:22px; color:#000; font-weight:600; text-decoration:none; font-size:.97em; display:inline-block">Voir le site</a>
+          </div>
+        </div>
+
+        <!-- Card 9: TryHackMe -->
+        <div style="display:flex; width:calc(33.33% - 16px); min-width:320px; min-height:120px; background:#1e293b; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.3); overflow:hidden; margin-bottom:8px">
+          <div style="background:#334155; display:flex; align-items:center; justify-content:center; width:120px; min-height:120px">
+            <img src="https://tryhackme.com/img/THMlogo.png" alt="TryHackMe" style="width:68px; max-height:68px; object-fit:contain">
+          </div>
+          <div style="flex:1; padding:20px 20px 20px 24px; display:flex; flex-direction:column; justify-content:center">
+            <div style="font-weight:700; font-size:1.13em; color:#4a7ab0; margin-bottom:7px">TryHackMe</div>
+            <div style="font-size:1em; color:#cbd5e1; margin-bottom:16px">Plateforme de labs pour s'exercer à la détection et analyse de malware.</div>
+            <a href="https://tryhackme.com/" target="_blank" style="align-self:flex-start; padding:8px 22px; background:#4a7ab0; border-radius:22px; color:#fff; font-weight:600; text-decoration:none; font-size:.97em; display:inline-block">Voir le site</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="relative py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0">
+              <img src="assets/logo-iris.png" alt="Logo IRIS" class="h-7 object-contain" loading="lazy" />
+            </div>
+            <span class="font-mono text-sm text-slate-300">ANDREO Vincent</span>
+          </div>
+          <p class="text-slate-500 text-xs">Portfolio ANDREO Vincent &copy; 2025 &mdash; Tous droits reserves</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/in/vincent-andr%C3%A9o-6a1367291/" target="_blank" rel="noopener"
+             class="w-10 h-10 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-accent-lime hover:border-accent-lime/40 transition-all hover:scale-110" title="LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
+          <a href="https://github.com/Vinceadr" target="_blank" rel="noopener"
+             class="w-10 h-10 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-400/40 transition-all hover:scale-110" title="GitHub"><i class="fab fa-github text-sm"></i></a>
+          <a href="mailto:vincent.andreo@mediaschool.me"
+             class="w-10 h-10 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-accent-lime hover:border-accent-lime/40 transition-all hover:scale-110" title="Email"><i class="fas fa-envelope text-sm"></i></a>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-500">
+          <a href="index.html"   class="hover:text-slate-300 transition-colors">Accueil</a>
+          <a href="profil.html"  class="hover:text-slate-300 transition-colors">Profil</a>
+          <a href="projets.html" class="hover:text-slate-300 transition-colors">Projets</a>
+          <a href="contact.html" class="hover:text-slate-300 transition-colors">Contact</a>
+          <a href="plan-site.html" class="hover:text-slate-300 transition-colors">Plan du site</a>
+          <a href="politique-confidentialite.html" class="hover:text-slate-300 transition-colors">Politique de confidentialité</a>
+          <a href="mentions-legales.html" class="hover:text-slate-300 transition-colors underline underline-offset-2">Mentions legales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    class="fixed bottom-8 right-6 z-40 w-12 h-12 rounded-full bg-gradient-to-br from-accent-lime to-accent-cyan text-white shadow-lg shadow-accent-lime/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:scale-110" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up text-sm"></i>
+  </button>
+  <script src="js/main.js" defer></script>
+  <script src="js/veille.js" defer></script>
+</body>
+</html>
+
+
+
+

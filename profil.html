@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil — ANDREO Vincent | BTS SIO SISR</title>
+  <meta name="description" content="Profil de Vincent Andreo — compétences techniques, soft skills, formations." />
+
+  <script src="js/tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased">
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <img src="assets/logo-iris.png" alt="Logo IRIS" class="h-8 object-contain" loading="lazy" />
+        </div>
+        <span class="font-mono text-sm text-slate-300 group-hover:text-white transition-colors hidden sm:block">ANDREO Vincent</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="index.html"      class="nav-link">Accueil</a></li>
+        <li><a href="profil.html"     class="nav-link">Profil</a></li>
+        <li><a href="projets.html"    class="nav-link">Projets</a></li>
+        <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+        <li><a href="veille.html"     class="nav-link">Veille</a></li>
+        <li><a href="contact.html"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="https://vandreoportfolio.wordpress.com/wp-content/uploads/2025/07/cv_2025-07-09_vincent_andreo.pdf" target="_blank" rel="noopener"
+           class="hidden md:inline-flex items-center gap-2 text-xs font-mono px-4 py-2 rounded-lg border border-accent-violet/40 text-accent-violet hover:bg-accent-violet/10 transition-all hover:border-accent-cyan hover:text-accent-cyan">
+          <i class="fas fa-download"></i> CV
+        </a>
+        <button id="burger-btn" class="md:hidden text-slate-300 hover:text-white" aria-label="Menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col gap-0 mt-4 pb-4 border-t border-slate-700/50">
+      <a href="index.html"      class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Accueil</a>
+      <a href="profil.html"     class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Profil</a>
+      <a href="projets.html"    class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Projets</a>
+      <a href="entreprise.html" class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Entreprise</a>
+      <a href="veille.html"     class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Veille</a>
+      <a href="contact.html"    class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      <a href="https://vandreoportfolio.wordpress.com/wp-content/uploads/2025/07/cv_2025-07-09_vincent_andreo.pdf" target="_blank"
+         class="block px-4 py-3 text-sm text-accent-violet hover:text-accent-cyan transition-all"><i class="fas fa-download mr-2"></i>Télécharger CV</a>
+    </div>
+  </nav>
+
+  <!-- ── PROFIL ── -->
+  <section id="profil" class="relative pt-32 pb-24 bg-alt overflow-hidden">
+    <div class="glow-orb w-80 h-80 bg-accent-violet" style="top:50%;left:-100px;opacity:0.08;"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- En-tête -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="text-accent-cyan font-mono text-sm tracking-widest uppercase mb-3 block">// 02. profil</span>
+        <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Mon <span class="gradient-text">Profil</span></h1>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Photo de profil [REMOVED - will be integrated below] -->
+
+      <!-- Compteurs -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16" data-aos="fade-up" data-aos-delay="100">
+        <div class="counter-box">
+          <div class="text-3xl font-black gradient-text mb-1"><span class="counter" data-target="2">0</span>+</div>
+          <div class="text-sm text-slate-400">Années de formation</div>
+        </div>
+        <div class="counter-box">
+          <div class="text-3xl font-black gradient-text mb-1"><span class="counter" data-target="7">0</span></div>
+          <div class="text-sm text-slate-400">Projets réalisés</div>
+        </div>
+        <div class="counter-box">
+          <div class="text-3xl font-black gradient-text mb-1"><span class="counter" data-target="8">0</span>+</div>
+          <div class="text-sm text-slate-400">Technologies maîtrisées</div>
+        </div>
+        <div class="counter-box">
+          <div class="text-3xl font-black gradient-text mb-1"><span class="counter" data-target="1">0</span></div>
+          <div class="text-sm text-slate-400">Stage en entreprise</div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 mb-16">
+        <!-- À propos avec avatar -->
+        <div data-aos="fade-right" data-aos-delay="100">
+          <!-- Photo complète, taille moyenne, sans rognage -->
+          <div class="flex justify-center mb-6">
+            <div class="relative inline-block">
+              <img src="assets/avatar-vincent.png"
+                   alt="Vincent Andreo"
+                   class="w-52 h-auto rounded-2xl object-cover shadow-2xl border-2 border-accent-lime/40"
+                   loading="lazy" />
+              <span class="absolute bottom-2 right-2 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-lg shadow">
+                <i class="fas fa-check mr-1"></i>Disponible
+              </span>
+            </div>
+          </div>
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+              <span class="w-8 h-8 rounded-lg bg-accent-lime/20 flex items-center justify-center">
+                <i class="fas fa-user text-accent-lime text-sm"></i>
+              </span>
+              À propos
+            </h2>
+          </div>
+          <div class="space-y-4 text-slate-400 leading-relaxed">
+            <p>J'ai commencé mon parcours par un <strong class="text-slate-200">baccalauréat professionnel Commerce</strong>, avant de me réorienter vers le secteur du bâtiment, où j'ai exercé en tant qu'<strong class="text-slate-200">électricien</strong> après l'obtention de mon CAP.</p>
+            <p>Curieux de découvrir d'autres métiers manuels, je me suis ensuite tourné vers le métier de <strong class="text-slate-200">paysagiste</strong>, que j'ai pratiqué pendant deux ans. Ces différentes expériences m'ont permis de mieux cerner ce qui m'anime réellement au quotidien.</p>
+            <p>C'est ainsi que j'ai décidé de me <strong class="text-slate-200">reconvertir dans un domaine qui me passionne : l'informatique</strong>. J'ai donc repris mes études en intégrant la formation <strong class="text-accent-lime">BTS Services Informatiques aux Organisations (SIO)</strong>, afin de me former aux métiers du numérique.</p>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://vandreoportfolio.wordpress.com/wp-content/uploads/2025/07/cv_2025-07-09_vincent_andreo.pdf"
+               target="_blank" rel="noopener" class="btn-primary text-sm">
+              <i class="fas fa-file-pdf"></i> Télécharger mon CV
+            </a>
+            <a href="https://vandreoportfolio.wordpress.com/wp-content/uploads/2025/07/tableau-de-synthese-epreuve-e4-bts-sio-2024-.pdf"
+               target="_blank" rel="noopener" class="btn-outline text-sm">
+              <i class="fas fa-table"></i> Tableau de synthèse E4
+            </a>
+          </div>
+        </div>
+
+        <!-- Compétences techniques -->
+        <div data-aos="fade-left" data-aos-delay="150">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-accent-lime/20 flex items-center justify-center">
+              <i class="fas fa-code text-accent-lime text-sm"></i>
+            </span>
+            Compétences techniques
+          </h2>
+          <div class="skill-domains" id="skills-container">
+
+            <div class="skill-domain" data-aos="fade-up" data-aos-delay="0">
+              <div class="domain-label domain-systems"><i class="fas fa-desktop"></i> Systèmes</div>
+              <div class="hex-grid">
+                <div class="hex-row">
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fab fa-windows text-blue-400"></i><span>Windows Server</span></div></div>
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-sitemap text-blue-300"></i><span>Active Directory</span></div></div>
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fab fa-linux text-orange-400"></i><span>Linux Debian Ubuntu</span></div></div>
+                </div>
+                <div class="hex-row hex-row-offset">
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-server text-slate-400"></i><span>VMware</span></div></div>
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fab fa-docker text-blue-500"></i><span>Docker</span></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-domain" data-aos="fade-up" data-aos-delay="80">
+              <div class="domain-label domain-network"><i class="fas fa-network-wired"></i> Réseaux</div>
+              <div class="hex-grid">
+                <div class="hex-row">
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-network-wired text-green-400"></i><span>Réseaux Cisco</span></div></div>
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-terminal text-blue-300"></i><span>PowerShell</span></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-domain" data-aos="fade-up" data-aos-delay="160">
+              <div class="domain-label domain-security"><i class="fas fa-shield-alt"></i> Sécurité</div>
+              <div class="hex-grid">
+                <div class="hex-row">
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-shield-alt text-red-400"></i><span>Cybersécurité</span></div></div>
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-user-secret text-red-300"></i><span>Pentest Kali Linux</span></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-domain" data-aos="fade-up" data-aos-delay="80">
+              <div class="domain-label domain-devops"><i class="fas fa-chart-line"></i> DevOps & Monitoring</div>
+              <div class="hex-grid">
+                <div class="hex-row">
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-chart-line text-orange-300"></i><span>Grafana Prometheus</span></div></div>
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-database text-cyan-400"></i><span>Loki Monitoring</span></div></div>
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-tools text-amber-400"></i><span>Ansible</span></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-domain" data-aos="fade-up" data-aos-delay="240">
+              <div class="domain-label domain-dev"><i class="fas fa-code"></i> Dev & Design</div>
+              <div class="hex-grid">
+                <div class="hex-row">
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fab fa-python text-yellow-400"></i><span>Python</span></div></div>
+                  <div class="hex-item"><div class="hex-border"></div><div class="hex-inner"><i class="fas fa-paint-brush text-purple-400"></i><span>Figma UI Design</span></div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-accent-violet/20 flex items-center justify-center">
+            <i class="fas fa-star text-accent-violet text-sm"></i>
+          </span>
+          Soft Skills
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="soft-skill-card" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fas fa-brain text-3xl text-accent-violet mb-3 block"></i>
+            <p class="text-sm text-slate-300 font-medium">Esprit logique</p>
+          </div>
+          <div class="soft-skill-card" data-aos="zoom-in" data-aos-delay="150">
+            <i class="fas fa-sync-alt text-3xl text-accent-cyan mb-3 block"></i>
+            <p class="text-sm text-slate-300 font-medium">Capacité d'adaptation</p>
+          </div>
+          <div class="soft-skill-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fas fa-search text-3xl text-accent-violet mb-3 block"></i>
+            <p class="text-sm text-slate-300 font-medium">Curiosité technique</p>
+          </div>
+          <div class="soft-skill-card" data-aos="zoom-in" data-aos-delay="250">
+            <i class="fas fa-comments text-3xl text-accent-cyan mb-3 block"></i>
+            <p class="text-sm text-slate-300 font-medium">Communication</p>
+          </div>
+          <div class="soft-skill-card" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fas fa-user-check text-3xl text-accent-violet mb-3 block"></i>
+            <p class="text-sm text-slate-300 font-medium">Autonomie</p>
+          </div>
+          <div class="soft-skill-card" data-aos="zoom-in" data-aos-delay="350">
+            <i class="fas fa-bolt text-3xl text-accent-cyan mb-3 block"></i>
+            <p class="text-sm text-slate-300 font-medium">Réactivité</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="relative py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0">
+              <img src="assets/logo-iris.png" alt="Logo IRIS" class="h-7 object-contain" loading="lazy" />
+            </div>
+            <span class="font-mono text-sm text-slate-300">ANDREO Vincent</span>
+          </div>
+          <p class="text-slate-500 text-xs">Portfolio ANDREO Vincent © 2025 — Tous droits réservés</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/in/vincent-andr%C3%A9o-6a1367291/" target="_blank" rel="noopener"
+             class="w-10 h-10 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-accent-cyan hover:border-accent-cyan/40 transition-all hover:scale-110" title="LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
+          <a href="https://github.com/Vinceadr" target="_blank" rel="noopener"
+             class="w-10 h-10 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-400/40 transition-all hover:scale-110" title="GitHub"><i class="fab fa-github text-sm"></i></a>
+          <a href="mailto:vincent.andreo@mediaschool.me"
+             class="w-10 h-10 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-accent-cyan hover:border-accent-cyan/40 transition-all hover:scale-110" title="Email"><i class="fas fa-envelope text-sm"></i></a>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-500">
+          <a href="index.html"   class="hover:text-slate-300 transition-colors">Accueil</a>
+          <a href="profil.html"  class="hover:text-slate-300 transition-colors">Profil</a>
+          <a href="projets.html" class="hover:text-slate-300 transition-colors">Projets</a>
+          <a href="contact.html" class="hover:text-slate-300 transition-colors">Contact</a>
+          <a href="plan-site.html" class="hover:text-slate-300 transition-colors">Plan du site</a>
+          <a href="politique-confidentialite.html" class="hover:text-slate-300 transition-colors">Politique de confidentialité</a>
+          <a href="mentions-legales.html" class="hover:text-slate-300 transition-colors underline underline-offset-2">Mentions légales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL TOP ── -->
+  <button id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    class="fixed bottom-8 right-6 z-40 w-12 h-12 rounded-full bg-gradient-to-br from-accent-lime to-accent-lime text-white shadow-lg shadow-accent-violet/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:scale-110" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up text-sm"></i>
+  </button>
+  <script src="js/main.js" defer></script>
+  <script src="js/profil.js" defer></script>
+</body>
+</html>
+
+
+

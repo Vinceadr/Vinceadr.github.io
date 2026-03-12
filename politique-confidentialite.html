@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de Confidentialité — ANDREO Vincent | BTS SIO SISR</title>
+  <meta name="description" content="Politique de confidentialité du portfolio de Vincent Andreo." />
+
+  <script src="js/tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased">
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <img src="assets/logo-iris.png" alt="Logo IRIS" class="h-8 object-contain" loading="lazy" />
+        </div>
+        <span class="font-mono text-sm text-slate-300 group-hover:text-white transition-colors hidden sm:block">ANDREO Vincent</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="index.html"      class="nav-link">Accueil</a></li>
+        <li><a href="profil.html"     class="nav-link">Profil</a></li>
+        <li><a href="projets.html"    class="nav-link">Projets</a></li>
+        <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+        <li><a href="veille.html"     class="nav-link">Veille</a></li>
+        <li><a href="contact.html"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="https://vandreoportfolio.wordpress.com/wp-content/uploads/2025/07/cv_2025-07-09_vincent_andreo.pdf" target="_blank" rel="noopener"
+           class="hidden md:inline-flex items-center gap-2 text-xs font-mono px-4 py-2 rounded-lg border border-accent-violet/40 text-accent-violet hover:bg-accent-violet/10 transition-all hover:border-accent-cyan hover:text-accent-cyan">
+          <i class="fas fa-download"></i> CV
+        </a>
+        <button id="burger-btn" class="md:hidden text-slate-300 hover:text-white" aria-label="Menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col gap-0 mt-4 pb-4 border-t border-slate-700/50">
+      <a href="index.html"      class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Accueil</a>
+      <a href="profil.html"     class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Profil</a>
+      <a href="projets.html"    class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Projets</a>
+      <a href="entreprise.html" class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Entreprise</a>
+      <a href="veille.html"     class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Veille</a>
+      <a href="contact.html"    class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      <a href="https://vandreoportfolio.wordpress.com/wp-content/uploads/2025/07/cv_2025-07-09_vincent_andreo.pdf" target="_blank"
+         class="block px-4 py-3 text-sm text-accent-violet hover:text-accent-cyan transition-all"><i class="fas fa-download mr-2"></i>Telecharger CV</a>
+    </div>
+  </nav>
+
+  <!-- ── POLITIQUE DE CONFIDENTIALITÉ ── -->
+  <section id="privacy" class="relative pt-32 pb-24 bg-alt overflow-hidden">
+    <div class="glow-orb w-80 h-80 bg-accent-cyan" style="bottom:-40px;left:-40px;opacity:0.08;"></div>
+
+    <div class="max-w-4xl mx-auto px-6">
+      <!-- En-tête -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="text-accent-cyan font-mono text-sm tracking-widest uppercase mb-3 block">// privacy</span>
+        <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Politique de <span class="gradient-text">Confidentialité</span></h1>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Contenu -->
+      <div class="glass rounded-2xl p-8 md:p-12 space-y-8" data-aos="fade-up" data-aos-delay="100">
+        
+        <!-- Introduction -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent-violet"></span>
+            À propos de cette politique
+          </h2>
+          <p class="text-slate-300 leading-relaxed">
+            Cette politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos données personnelles lorsque vous visitez notre site portfolio. Nous nous engageons à respecter votre vie privée et à conformer notre activité aux régulations en vigueur, notamment le Règlement Général sur la Protection des Données (RGPD).
+          </p>
+        </div>
+
+        <!-- Données collectées -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent-cyan"></span>
+            Quelles données collectons-nous ?
+          </h2>
+          <div class="space-y-4 text-slate-300">
+            <div class="rounded-lg bg-accent-violet/5 border border-accent-violet/30 p-4">
+              <p class="font-semibold text-white mb-2">Données du formulaire de contact</p>
+              <p>Lorsque vous utilisez notre formulaire de contact, nous collectons : votre prénom, nom, adresse email et le contenu de votre message.</p>
+            </div>
+            <div class="rounded-lg bg-accent-cyan/5 border border-accent-cyan/30 p-4">
+              <p class="font-semibold text-white mb-2">Données de navigation</p>
+              <p>Notre hébergeur (WordPress.com) peut collecter des informations techniques telles que votre adresse IP, le type de navigateur utilisé, et les pages consultées.</p>
+            </div>
+            <div class="rounded-lg bg-accent-violet/5 border border-accent-violet/30 p-4">
+              <p class="font-semibold text-white mb-2">Cookies</p>
+              <p>Nous utilisons des cookies pour améliorer votre expérience utilisateur. Ces cookies ne contiennent pas de données personnelles directement identifiables.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Utilisation des données -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent-cyan"></span>
+            Comment utilisons-nous vos données ?
+          </h2>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-accent-violet flex-shrink-0 mt-1">✓</span>
+              <span>Pour répondre à vos messages via le formulaire de contact</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent-cyan flex-shrink-0 mt-1">✓</span>
+              <span>Pour améliorer les performances et la sécurité du site</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent-violet flex-shrink-0 mt-1">✓</span>
+              <span>Pour analyser les statistiques de visite du site</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent-cyan flex-shrink-0 mt-1">✓</span>
+              <span>Pour vous contacter si vous l'autorisez</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Partage des données -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent-violet"></span>
+            Partage de vos données
+          </h2>
+          <p class="text-slate-300 mb-4">Vos données personnelles ne sont jamais vendues, louées ou partagées avec des tiers à des fins de marketing ou publicitaires. Seules les données nécessaires au fonctionnement du site sont partagées avec :</p>
+          <ul class="space-y-2 text-slate-300">
+            <li class="flex items-center gap-3"><span class="text-accent-violet">→</span>WordPress.com (notre hébergeur)</li>
+            <li class="flex items-center gap-3"><span class="text-accent-violet">→</span>Les services tiers strictement nécessaires au fonctionnement du site</li>
+          </ul>
+        </div>
+
+        <!-- Sécurité des données -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent-cyan"></span>
+            Sécurité de vos données
+          </h2>
+          <p class="text-slate-300">
+            Nous prenons des mesures appropriées pour protéger vos données personnelles contre l'accès non autorisé, la perte ou la modification. Cependant, aucune transmission de données sur Internet ne peut être garantie à 100% sécurisée.
+          </p>
+        </div>
+
+        <!-- Droits RGPD -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent-violet"></span>
+            Vos droits (RGPD)
+          </h2>
+          <p class="text-slate-300 mb-4">Conformément au Règlement Général sur la Protection des Données, vous avez les droits suivants :</p>
+          <div class="space-y-3">
+            <div class="rounded-lg bg-gradient-to-r from-accent-violet/10 to-accent-cyan/10 border border-accent-violet/20 p-4">
+              <p class="font-semibold text-white mb-1">Droit d'accès</p>
+              <p class="text-sm text-slate-300">Vous pouvez demander l'accès à vos données personnelles</p>
+            </div>
+            <div class="rounded-lg bg-gradient-to-r from-accent-violet/10 to-accent-cyan/10 border border-accent-cyan/20 p-4">
+              <p class="font-semibold text-white mb-1">Droit de rectification</p>
+              <p class="text-sm text-slate-300">Vous pouvez demander la correction de données inexactes</p>
+            </div>
+            <div class="rounded-lg bg-gradient-to-r from-accent-violet/10 to-accent-cyan/10 border border-accent-violet/20 p-4">
+              <p class="font-semibold text-white mb-1">Droit à l'oubli</p>
+              <p class="text-sm text-slate-300">Vous pouvez demander la suppression de vos données</p>
+            </div>
+            <div class="rounded-lg bg-gradient-to-r from-accent-violet/10 to-accent-cyan/10 border border-accent-cyan/20 p-4">
+              <p class="font-semibold text-white mb-1">Droit à la portabilité</p>
+              <p class="text-sm text-slate-300">Vous pouvez demander vos données dans un format portable</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact pour confidentialité -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent-cyan"></span>
+            Nous contacter
+          </h2>
+          <p class="text-slate-300 mb-4">
+            Pour exercer vos droits ou pour toute question concernant cette politique de confidentialité, veuillez nous contacter à :
+          </p>
+          <div class="rounded-lg bg-dark-card/50 border border-accent-violet/30 p-6">
+            <p class="text-white font-semibold mb-2">ANDREO Vincent</p>
+            <p class="text-accent-cyan mb-3">
+              <i class="fas fa-envelope mr-2"></i>
+              <a href="mailto:vincent.andreo@mediaschool.me" class="hover:underline">vincent.andreo@mediaschool.me</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Modifications -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent-violet"></span>
+            Modifications de cette politique
+          </h2>
+          <p class="text-slate-300">
+            Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications prendront effet immédiatement après publication sur le site. Votre utilisation continue du site suite à ces modifications constitue votre acceptation des termes modifiés.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="relative py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0">
+              <img src="assets/logo-iris.png" alt="Logo IRIS" class="h-7 object-contain" loading="lazy" />
+            </div>
+            <span class="font-mono text-sm text-slate-300">ANDREO Vincent</span>
+          </div>
+          <p class="text-slate-500 text-xs">Portfolio ANDREO Vincent &copy; 2025 &mdash; Tous droits reserves</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/in/vincent-andr%C3%A9o-6a1367291/" target="_blank" rel="noopener"
+             class="w-10 h-10 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-accent-cyan hover:border-accent-cyan/40 transition-all hover:scale-110" title="LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
+          <a href="https://github.com/Vinceadr" target="_blank" rel="noopener"
+             class="w-10 h-10 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-400/40 transition-all hover:scale-110" title="GitHub"><i class="fab fa-github text-sm"></i></a>
+          <a href="mailto:vincent.andreo@mediaschool.me"
+             class="w-10 h-10 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-accent-cyan hover:border-accent-cyan/40 transition-all hover:scale-110" title="Email"><i class="fas fa-envelope text-sm"></i></a>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-500">
+          <a href="index.html"   class="hover:text-slate-300 transition-colors">Accueil</a>
+          <a href="profil.html"  class="hover:text-slate-300 transition-colors">Profil</a>
+          <a href="projets.html" class="hover:text-slate-300 transition-colors">Projets</a>
+          <a href="contact.html" class="hover:text-slate-300 transition-colors">Contact</a>
+          <a href="plan-site.html" class="hover:text-slate-300 transition-colors">Plan du site</a>
+          <a href="politique-confidentialite.html" class="hover:text-slate-300 transition-colors">Politique de confidentialité</a>
+          <a href="mentions-legales.html" class="hover:text-slate-300 transition-colors underline underline-offset-2">Mentions legales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    class="fixed bottom-8 right-6 z-40 w-12 h-12 rounded-full bg-gradient-to-br from-accent-lime to-accent-lime text-white shadow-lg shadow-accent-violet/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:scale-110" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up text-sm"></i>
+  </button>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
+
+
+
